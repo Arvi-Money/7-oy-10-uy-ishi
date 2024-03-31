@@ -8,10 +8,13 @@ import Link from 'next/link';
 function Home() {
     const [cars, setCars] = useState([]);
     const [local, setLocal] = useState([]);
+    const Id = Date.now();
+    const [id, setId] = useState();
 
     useEffect(() => {
         setCars(data.cars);
         setLocal(getData);
+        setId(Id);
     }, []);
 
     function getData() {
