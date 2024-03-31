@@ -30,10 +30,12 @@ function Home() {
                 cars.length > 0 && cars.map((el, index) => {
 
                     return (
-                        <Link href={`/about/${el.id}`} className="card d-flex justify-content-center align-items-center" style={{ width: '250px', height: '180px', border: '2px solid green', textDecoration: 'none'}} key={index}>
+                        <Link href={`/about/${el.id}`} style={{textDecoration: 'none'}}>
+                        <div className="card d-flex justify-content-center align-items-center" style={{ width: '250px', height: '180px', border: '2px solid green'}} key={index}>
                             <h5 className='fs-3'>{el.brand}</h5>
                             <h6 className="fs-5">Model: {el.model}</h6>
                             <p className='fs-5'>Price: {el.price}</p>
+                        </div>
                         </Link>
                     );
                 })
